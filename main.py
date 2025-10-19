@@ -423,11 +423,17 @@ def transfer():
  
     while True:
         try:
-            amount_input = input("Enter Transfer Amount: ").strip()
-            if  amount_input.lower() == 'exit':
-                print("Transfer Cancelled.")
+            amount_input = input("Enter Transfer Amount (or 'exit' to cancel): ").strip()
+
+            if amount_input.lower() == 'exit':
+                print("↩️ Transfer cancelled.")
                 time.sleep(0.5)
-                return # Exists the function,returning to the  logged-in menu loop 
+                return  # Exits the function, returning to the logged-in menu loop
+
+
+            if not amount_input:
+                print("❌ Error: Transfer amount cannot be blank.")
+                continue
             amount = float(amount_input)
             if amount <= 0:
                 print("❌ Error: Transfer amount must be a positive number.")
@@ -565,4 +571,5 @@ while True:
 
 
 if __name__ == "__main__":
+
     main()
