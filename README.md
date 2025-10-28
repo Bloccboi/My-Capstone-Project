@@ -32,5 +32,5 @@ It allows users to create accounts, deposit or withdraw money, transfer funds, a
 
 ```bash
 git clone https://github.com/Bloccboi/My-Capstone-Project.git
-cd Banking-app-capstone
+cd banking-app-capstone
 python main.py
